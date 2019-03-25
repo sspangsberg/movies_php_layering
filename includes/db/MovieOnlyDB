@@ -1,0 +1,23 @@
+DROP DATABASE IF EXISTS MovieOnlyDB; 
+CREATE DATABASE MovieOnlyDB; 
+USE MovieOnlyDB;
+
+CREATE TABLE Movie 
+(
+    MovieID int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    Title varchar(100),
+    Year int,
+    `Length` int,
+    Genre varchar(255),
+    Director varchar(255),
+    Description varchar(255),
+    imgUrl varchar(255)
+);
+
+
+INSERT INTO `Movie` (`MovieID`, `Title`, `Year`, `Length`, `Genre`, `Director`, `Description`, `imgUrl`) VALUES
+(1, 'Terminator 2', 1986, 210, 'Action', 'James Cameron', 'Dystopic epic legendary action movie', 'https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY999_CR0,0,672,999_AL_.jpg'),
+(2, 'Pulp Fiction', 1994, 154, 'Crime Drama', 'Quentin Tarantino', 'The lives of two mob hitmen, a boxer, a gangsters wife, and a pair of diner bandits intertwine in four tales of violence and redemption.', 'https://images-na.ssl-images-amazon.com/images/I/51WG6GXWSCL._SY445_.jpg'),
+(3, 'Inception', 2010, 148, 'Action Adventure', 'Christopher Nolan', 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg');
+
+
